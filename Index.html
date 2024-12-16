@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Booktopia.com</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+</head>
+<body class="w3-content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="w3-container w3-display-container w3-padding-16">
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide" style="color:#66534a"><b>Booktopia.</b></h3>
+  </div>
+  <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+    <a href="#" class="w3-bar-item w3-button">Home</a>
+    <a href="#" class="w3-bar-item w3-button">About Us</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+      Shop <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Fantasy</a>
+      <a href="#" class="w3-bar-item w3-button w3-light-grey"><i class="fa fa-caret-right w3-margin-right"></i>Romance</a>
+    </div>
+    <a href="#footer" class="w3-bar-item w3-button">Services</a>
+    <a href="#footer" class="w3-bar-item w3-button">Check Out</a>
+  </div>
+  <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+  <a href="#footer"  class="w3-bar-item w3-button w3-padding">Store</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+  <div class="w3-bar-item w3-padding-24 w3-wide">Booktopia.</div>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge">
+    <p class="w3-right">
+      <i class="fa fa-shopping-cart w3-margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="w3-display-container w3-container">
+    <img src="Buku-buku.jpg" alt="Read" style="width:100%">
+    <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+      <h1 class="w3-jumbo w3-hide-small">New Arrivals</h1>
+      <h1 class="w3-hide-large w3-hide-medium">New Arrivals</h1>
+      <h1 class="w3-hide-small">COLLECTION 2024</h1>
+      <p><a href="#Read" class="w3-button w3-brown w3-padding-large w3-large">EXPLORE</a></p>
+    </div>
+  </div>
+
+  <div class="w3-container w3-text-Black" id="About">
+    <h1 style="font-size:3em" class="w3-text-brown">About Us</h1>
+    <p align="justify" style="font-size:18px">Booktopia.com is the largest and most complete online bookstore in Indonesia that provides a variety of quality books. Since 2018, Booktopia has built an online store. This store is part of the Booktopia Store. From 2018 to the present, Booktopia.com is managed by PT.Ethereal Books. Now Booktopia.com has been integrated with more than 90 Booktopia store branches throughout Indonesia. Customers can shop and make purchases from the nearest Booktopia in your city.</p>
+  </div>
+
+  <div class="w3-container w3-text-brown" id="Read">
+    <p><b>Reading Lists :</b></p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row w3-white">
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="Moby.png" style="width:100%">
+        <p align="center">English Classic: Moby-Dick<br><b>Rp139.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown" style="margin-top: 21px">Buy now <i class="fa fa-shopping-cart"></i></button> </p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Romeo.png" style="width:100%">
+        <p align="center">English Classic: Romeo and Juliet<br><b>Rp49.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Tteok.png" style="width:100%">
+        <p align="center">I Want To Die But I Want To Eat Tteokpokki<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+            <div class="w3-container">
+        <img src="Hotel.png" style="width:100%">
+        <p align="center">Masquerade Hotel<br><b>Rp139.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+
+      <div class="w3-container">
+        <img src="Hunt.png" style="width:100%">
+        <p align="center">We Hunt The Flame<br><b>Rp155.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="The Heroes.png" style="width:100%">
+        <p align="center">The Heroes of Olympus #5<br><b>Rp199.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Career.png" style="width:100%">
+        <p align="center">Titian Kejahatan (Career or Evil)<br><b>Rp178.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Kertas.png" style="width:100%">
+        <p align="center">Kertas Gabut<br><b>Rp99.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Nebula.png" style="width:100%">
+        <p align="center">Nebula<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Selena.png" style="width:100%">
+        <p align="center">Selena<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Bibi Gill.png" style="width:100%">
+        <p align="center">Bibi Gill<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Si Putih.png" style="width:100%">
+        <p align="center">Si Putih<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Sagaras.png" style="width:100%">
+        <p align="center">Sagaras<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="Robin.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">New</span>
+          <div class="w3-display-middle w3-display-hover">
+          </div>
+        </div>
+        <p align="center">English Classic: Robin Hood<br><b>Rp65.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="A Mid.png" style="width:100%">
+        <p align="center">A Midsummer Night's Dream<br><b>Rp39.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+            <div class="w3-container">
+        <img src="Bintang.png" style="width:100%">
+        <p align="center">Bintang<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown" style="margin-top: 21px">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+            <div class="w3-container">
+        <img src="Lumpu.png" style="width:100%">
+        <p align="center">Lumpu<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+
+      <div class="w3-container">
+        <img src="Komet Minor.png" style="width:100%">
+        <p align="center">Komet Minor<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Komet.png" style="width:100%">
+        <p align="center">Komet<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Ceros.png" style="width:100%">
+        <p align="center">Ceros dan Batozar<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown" style="margin-top: 22px">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Matahari.png" style="width:100%">
+        <p align="center">Matahari Minor<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Sun.png" style="width:100%">
+        <p align="center">Matahari<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Bulan.png" style="width:100%">
+        <p align="center">Bulan<br><b>Rp105.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Bumi.png" style="width:100%">
+        <p align="center">Bumi<br><b>Rp109.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="ILY.png" style="width:100%">
+        <p align="center">ILY<br><b>Rp99.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Narnia 1.png" style="width:100%">
+        <p align="center">Narnia #1<br><b>Rp65.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="The Taming.png" style="width:100%">
+        <p align="center">English Classic: The Taming Of The Shrew<br><b>Rp49.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <div class="w3-display-container">
+          <img src="Serendipity.png" style="width:100%">
+          <span class="w3-tag w3-display-topleft">Sale</span>
+          <div class="w3-display-middle w3-display-hover">
+          </div>
+        </div>
+        <p align="center">Serendipity<br><b class="w3-text-black">Rp89.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown" style="margin-top:21px">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+
+       <div class="w3-container">
+        <img src="Narnia 2.png" style="width:100%">
+        <p align="center">Narnia #2<br><b>Rp65.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown" style="margin-top:21px">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+            <div class="w3-container">
+        <img src="Narnia 3.png" style="width:100%">
+        <p align="center">Narnia #3<br><b>Rp65.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+
+      <div class="w3-container">
+        <img src="Narnia 4.png" style="width:100%">
+        <p align="center">Narnia #4<br><b>Rp65.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Narnia 5.png" style="width:100%">
+        <p align="center">Narnia #5<br><b>Rp65.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Narnia 6.png" style="width:100%">
+        <p align="center">Narnia #6<br><b>Rp65.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown" style="margin-top: 21px">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Narnia 7.png" style="width:100%">
+        <p align="center">Narnia #7<br><b>Rp65.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Find.png" style="width:100%">
+        <p align="center">Fantastic Beast<br><b>Rp123.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Grindelwald.png" style="width:100%">
+        <p align="center">Grindelwald<br><b>Rp320.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Newt.png" style="width:100%">
+        <p align="center">Newt Scamander<br><b>Rp149.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Child.png" style="width:100%">
+        <p align="center">The Cursed Child<br><b>Rp139.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Nimona.png" style="width:100%">
+        <p align="center">Nimona<br><b>Rp89.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">
+        <img src="Kastel.png" style="width:100%">
+        <p align="center">Kastel Terpencil di Dalam Cermin<br><b>Rp110.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="To Kill.png" style="width:100%">
+        <p align="center">To Kill A Kingdom<br><b>Rp115.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown" style="margin-top:21px">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="RQT 3.png" style="width:100%">
+        <p align="center">King's Cage<br><b>Rp119.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown"style="margin-top:21px">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+            <div class="w3-container">
+        <img src="RQT 4.png" style="width:100%">
+        <p align="center">War Storm<br><b>Rp149.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+
+      <div class="w3-container">
+        <img src="RQT 5.png" style="width:100%">
+        <p align="center">Broken Throne<br><b>Rp109.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Lost.png" style="width:100%">
+        <p align="center">The Lost Memories<br><b>Rp99.400,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Wish.png" style="width:100%">
+        <p align="center">The Forbidden Wish<br><b>Rp89.500,-</b></p>
+        <p align="center"><button class="w3-button w3-brown" style="margin-top:21px">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Peter.png" style="width:100%">
+        <p align="center">Peter Pan<br><b>Rp50.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Nut.png" style="width:100%">
+        <p align="center">The Nutcracker<br><b>Rp45.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Caraval 1.png" style="width:100%">
+        <p align="center">Caraval<br><b>Rp99.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Caraval 2.png" style="width:100%">
+        <p align="center">Legendary<br><b>Rp99.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Caraval 3.png" style="width:100%">
+        <p align="center">Finale<br><b>Rp109.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+
+      <div class="w3-container">
+        <img src="Fang.png" style="width:100%">
+        <p align="center">English Classic: White Fang<br><b>Rp69.000,-</b></p>
+        <p align="center"><button class="w3-button w3-brown">Buy now <i class="fa fa-shopping-cart"></i></button></p><br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-brown w3-padding-32">
+    <h1>Services</h1>
+    <p class="w3-container" style="font-size:15px"><b>To order a book online from a bookstore, you can:</b></p>
+    <ol>
+      <li>Search for the book by title or author</li>
+      <li>Add it to your shopping cart</li>
+      <li>Review your items and check out</li>
+      <li>Select a delivery option, such as shipping or store pickup</li>
+      <li>Verify your billing address</li>
+      <li>Select a payment type and enter the required information</li>
+      <li>Review your order and submit it</li>
+    </ol>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Check Out</h4>
+        <p>Billing Details:</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Phone Number" name="Phone Number" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Address" name="Address" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Order Notes" name="Order Notes" required></p>
+        <h4>Coupon Code</h4>
+        <p>Enter your coupon code if you have one</p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Coupon Code" name="Coupon Code" required></p>
+          <button type="submit" class="w3-button w3-block w3-brown">Place Order</button><br>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">We're hiring</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i>Mall Grand Indonesia East Mall, Jl. M.H. Thamrin No.1 Lt. 3</p>
+        <p><i class="fa fa-fw fa-phone"></i> +62 821-3541-2200</p>
+        <p><i class="fa fa-fw fa-envelope"></i> infobooktopia@gmail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-brown w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">Me</a></div>
+
+
+
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-brown w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
